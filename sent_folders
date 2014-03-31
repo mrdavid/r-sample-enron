@@ -4,7 +4,6 @@
 ./enron_mail_20110402/maildir/arnold-j/_sent_mail
 ./enron_mail_20110402/maildir/arnold-j/sent
 ./enron_mail_20110402/maildir/arnold-j/sent_items
-./enron_mail_20110402/maildir/arora-h/presentations
 ./enron_mail_20110402/maildir/arora-h/sent
 ./enron_mail_20110402/maildir/arora-h/sent_items
 ./enron_mail_20110402/maildir/badeer-r/_sent_mail
@@ -22,7 +21,6 @@
 ./enron_mail_20110402/maildir/benson-r/sent_items
 ./enron_mail_20110402/maildir/blair-l/_sent_mail
 ./enron_mail_20110402/maildir/blair-l/deleted_items/_sent_mail
-./enron_mail_20110402/maildir/blair-l/presentations
 ./enron_mail_20110402/maildir/blair-l/sent_items
 ./enron_mail_20110402/maildir/brawner-s/_sent_mail
 ./enron_mail_20110402/maildir/brawner-s/sent
@@ -124,10 +122,8 @@
 ./enron_mail_20110402/maildir/jones-t/sent
 ./enron_mail_20110402/maildir/jones-t/sent_items
 ./enron_mail_20110402/maildir/kaminski-v/_sent_mail
-./enron_mail_20110402/maildir/kaminski-v/presentations
 ./enron_mail_20110402/maildir/kaminski-v/sent
 ./enron_mail_20110402/maildir/kaminski-v/sent_items
-./enron_mail_20110402/maildir/kean-s/presentations
 ./enron_mail_20110402/maildir/kean-s/sent
 ./enron_mail_20110402/maildir/kean-s/sent_items
 ./enron_mail_20110402/maildir/keavey-p/_sent_mail
@@ -174,10 +170,8 @@
 ./enron_mail_20110402/maildir/may-l/_sent_mail
 ./enron_mail_20110402/maildir/may-l/sent
 ./enron_mail_20110402/maildir/may-l/sent_items
-./enron_mail_20110402/maildir/mccarty-d/inbox/presentations
 ./enron_mail_20110402/maildir/mccarty-d/sent_items
 ./enron_mail_20110402/maildir/mcconnell-m/_sent_mail
-./enron_mail_20110402/maildir/mcconnell-m/presentations
 ./enron_mail_20110402/maildir/mcconnell-m/sent
 ./enron_mail_20110402/maildir/mcconnell-m/sent_items
 ./enron_mail_20110402/maildir/mckay-b/_sent_mail
@@ -228,7 +222,6 @@
 ./enron_mail_20110402/maildir/rodrique-r/_sent_mail
 ./enron_mail_20110402/maildir/rodrique-r/sent
 ./enron_mail_20110402/maildir/rogers-b/_sent_mail
-./enron_mail_20110402/maildir/rogers-b/presentations
 ./enron_mail_20110402/maildir/rogers-b/sent
 ./enron_mail_20110402/maildir/rogers-b/sent_items
 ./enron_mail_20110402/maildir/ruscitti-k/_sent_mail
@@ -254,7 +247,6 @@
 ./enron_mail_20110402/maildir/shackleton-s/sent_items
 ./enron_mail_20110402/maildir/shankman-j/sent
 ./enron_mail_20110402/maildir/shankman-j/sent_items
-./enron_mail_20110402/maildir/shapiro-r/presentations
 ./enron_mail_20110402/maildir/shapiro-r/sent
 ./enron_mail_20110402/maildir/shapiro-r/sent_items
 ./enron_mail_20110402/maildir/shively-h/_sent_mail
