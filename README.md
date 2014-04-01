@@ -1,18 +1,85 @@
+# Analyzing the Enron Email Corpus - Demo
+
+This R file analyses some of the Enron Email Corpus. It produces 4 PDF files, each containing a graph
+displaying how different persons are connected through emails present in the corpus.
+
+The Enron Email Corpus can be downloaded from http://www.cs.cmu.edu/~enron/ and the contents
+should be untared in the same directory as the R script, producing a folder named 'enron_mail_20110402'.
+The first line of the R script needs to be adjusted to the environment. A script that does all of this automatically is provided (see below).
+
+The R script itself contains more comments with details on each step in the analysis.
+
+## Data selection
+
+Due to constrains on time and resources, only a subset of the emails is analysed.
+
+*Only emails from 'Sent' or 'Sent_Items' folders are analysed.*
+
+This greatly reduces the number of emails. 'Sent' folders will not contain spam and will only
+contain email sent on purpose by an Enron employee, making it uncessary to filter emails for
+validity. 'Sent' folders will furthermore not contain duplicates (i.e. an email in the 'Sent'
+folder of one person will be present in the inbox of another person, but not in any other
+'Sent' folder), relieving us of the work of identifying such duplicates and removing them.
+
+The 'Sent' type folders are filtered out with the following command:
+
+```
+find . -type d  | grep -i sent | grep -v presentation > sent_folders
+``` 
+
+*Only emails sent from one person to exactly one person will are analysed*
+
+Although the data set contains many emails sent to several receipients, parsing to *To:*
+fields of the emails was skipped for time constraints. Only emails sent directly to one
+receipient are kept.
+
+## Analysis: Mails sent between people whose mailboxes are in the data set ('00.most.mails.pdf')
+
+The first analysis looks only at emails that are sent between people whose mailbox is in the data set.
+To do that, only emails are kept that are sent to someone that has also sent a mail him/herself.
+
+The graph shows connections between people where more than 150 emails have been sent. This number
+reduces the data set to only 21 people, a number that can still be plotted nicely. The thickness of
+each arch in the graph shows the volume of email exchanged. The size of each vertex is proportional
+to the number of different people that person has sent emails to overall.
+
+Within the selected data, unfortunately most mails sent directly seem to be quite disconnected from each other.
+The connection between Kay Mann and Suzanne Adams is exceptionally strong.
+
+## Analysis: Important people
+
+We quickly analyse some important people within the network. A paper by Shetty and Adibi suggests these names:
+
+* Louise Kitchen
+* Mike Grigsby
+* Greg Whalley
+* Scott Neal
+* Kenneth Lay
+
+### Mails to or from important people: Whole network ('01.important.people.pdf')
+
+We first simply plot the whole network of people that have sent mails or received mails from one of the members
+in the list of important people. The graph shows some interesting properties. While there are a lot of people
+that only exchange emails with one of the important people (this is probably in part due to their inboxes not being in the data set), there is a group of people (in the center of the graph) that is connected to nearly all of the important people.
+
+### Mails to or from important people: Network of 'well connected' people ('02.important.people.well.connected.pdf')
+
+The graph shows only those people in the network that have more than 4 connections. One can see that nearly
+everybody is connected to Louise Kitchen.
+
+### Mails to or from important people: Strength of connections between 'well connected' people ('03.important.people.well.connected.weights.pdf')
+
+The last graph shows the network of 'well connected' people with thickness of lines indicating the number of emails sent from one person to the other. The connection between Louise Kitchen and John Lavarato and Sally Beck is exceptionally strong. Furthermore, John Lavarato has quite strong connections to all of the 'important people' mentioned above.
+
+# Running the analysis from scratch
+
+The analysis can be run from scratch, using only the R script and assuming that the relevant libraries are installed by using
+
+```
+chmod u+x run.sh
+./run.sh
+```
+
+## Sources
+
 Source of Enron Corpus: http://www.cs.cmu.edu/~enron/
-
-Command to filter only emails in the 'sent' folders:
-find . -type d  | grep -i sent
-
-FROM all mails in all mailboxes
-  TAKE ONLY mails in folders containing the word 'sent'
-    (REASON: 'Sent' folders should only contain messages form the owner of the mailbox - keeping the list to people we have data about)
-  TAKE ONLY mails that are have been sent to ONLY ONE PERSON
-    (REASON: ...)
-  TAKE ONLY mails that have been sent TO someone that has also sent a mail
-    (REASON: This way we should only get messages between people in the mailboxes)
-  TAKE ONLY mails from from people that have exchanged more than 150 mails
-    (REASON: This takes it down to 22 people, making for a nice plot)
-
-Conclusion:
-Vincent Kaminski forwards a his mail to his AOL account
-https://en.wikipedia.org/wiki/Vincent_Kaminski

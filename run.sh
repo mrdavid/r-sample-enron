@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## download and untar the Enron email corpus
-#wget http://www.cs.cmu.edu/~enron/enron_mail_20110402.tgz
-#tar xvfz enron_mail_20110402.tgz
+wget http://www.cs.cmu.edu/~enron/enron_mail_20110402.tgz
+tar xvfz enron_mail_20110402.tgz
 
 ## create a list of 'sent' folders
 echo "Creating list of 'sent' folders. This may take a moment."
