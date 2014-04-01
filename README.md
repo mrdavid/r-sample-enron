@@ -91,3 +91,5 @@ chmod u+x run.sh
 ### Sources
 
 Source of Enron Corpus: http://www.cs.cmu.edu/~enron/
+
+*Please note: This a demo of R rather than a proper analysis. Due to time constraints, only a small part of the emails was analyzed. No conclusions should be drawn from the results without analyzing the whole dataset.*
