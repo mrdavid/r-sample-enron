@@ -1,4 +1,4 @@
-# Analyzing the Enron Email Corpus - Demo
+## Analyzing the Enron Email Corpus - Demo
 
 This R file analyses some of the Enron Email Corpus. It produces 4 PDF files, each containing a graph
 displaying how different persons are connected through emails present in the corpus.
@@ -9,7 +9,7 @@ The first line of the R script needs to be adjusted to the environment. A script
 
 The R script itself contains more comments with details on each step in the analysis.
 
-## Data selection
+### Data selection
 
 Due to constrains on time and resources, only a subset of the emails is analysed.
 
@@ -27,13 +27,15 @@ The 'Sent' type folders are filtered out with the following command:
 find . -type d  | grep -i sent | grep -v presentation > sent_folders
 ``` 
 
-*Only emails sent from one person to exactly one person will are analysed*
+*Only emails sent from one person to exactly one person are analysed*
 
-Although the data set contains many emails sent to several receipients, parsing to *To:*
-fields of the emails was skipped for time constraints. Only emails sent directly to one
+Although the data set contains many emails sent to several receipients, parsing the *To:*
+field of the emails was skipped for time constraints. Only emails sent directly to one
 receipient are kept.
 
-## Analysis: Mails sent between people whose mailboxes are in the data set ('00.most.mails.pdf')
+### Analysis: Mails sent between people whose mailboxes are in the data set
+
+_Graph: 00.most.mails.pdf_
 
 The first analysis looks only at emails that are sent between people whose mailbox is in the data set.
 To do that, only emails are kept that are sent to someone that has also sent a mail him/herself.
@@ -46,7 +48,7 @@ to the number of different people that person has sent emails to overall.
 Within the selected data, unfortunately most mails sent directly seem to be quite disconnected from each other.
 The connection between Kay Mann and Suzanne Adams is exceptionally strong.
 
-## Analysis: Important people
+### Analysis: Important people
 
 We quickly analyse some important people within the network. A paper by Shetty and Adibi suggests these names:
 
@@ -56,22 +58,28 @@ We quickly analyse some important people within the network. A paper by Shetty a
 * Scott Neal
 * Kenneth Lay
 
-### Mails to or from important people: Whole network ('01.important.people.pdf')
+#### Mails to or from important people: Whole network
+
+_Graph:  01.important.people.pdf_
 
 We first simply plot the whole network of people that have sent mails or received mails from one of the members
 in the list of important people. The graph shows some interesting properties. While there are a lot of people
 that only exchange emails with one of the important people (this is probably in part due to their inboxes not being in the data set), there is a group of people (in the center of the graph) that is connected to nearly all of the important people.
 
-### Mails to or from important people: Network of 'well connected' people ('02.important.people.well.connected.pdf')
+#### Mails to or from important people: Network of 'well connected' people
+
+_Graph: 02.important.people.well.connected.pdf_
 
 The graph shows only those people in the network that have more than 4 connections. One can see that nearly
 everybody is connected to Louise Kitchen.
 
-### Mails to or from important people: Strength of connections between 'well connected' people ('03.important.people.well.connected.weights.pdf')
+#### Mails to or from important people: Strength of connections between 'well connected' people
+
+_Graph: 03.important.people.well.connected.weights.pdf_
 
 The last graph shows the network of 'well connected' people with thickness of lines indicating the number of emails sent from one person to the other. The connection between Louise Kitchen and John Lavarato and Sally Beck is exceptionally strong. Furthermore, John Lavarato has quite strong connections to all of the 'important people' mentioned above.
 
-# Running the analysis from scratch
+## Running the analysis from scratch
 
 The analysis can be run from scratch, using only the R script and assuming that the relevant libraries are installed by using
 
@@ -80,6 +88,6 @@ chmod u+x run.sh
 ./run.sh
 ```
 
-## Sources
+### Sources
 
 Source of Enron Corpus: http://www.cs.cmu.edu/~enron/
