@@ -62,15 +62,15 @@ We quickly analyse some important people within the network. A paper by Shetty a
 
 _Graph:  01.important.people.pdf_
 
-We first simply plot the whole network of people that have sent mails or received mails from one of the members
+We first simply plot the whole network of people that have sent mails to or received mails from one of the members
 in the list of important people. The graph shows some interesting properties. While there are a lot of people
-that only exchange emails with one of the important people (this is probably in part due to their inboxes not being in the data set), there is a group of people (in the center of the graph) that is connected to nearly all of the important people.
+that only exchange emails with one of the important people (this is probably in part due to their inboxes not being in the data set), there is a group of people (in the center of the graph) that is connected to nearly all of the important people. (E.g. John Lavorato, Jeffrey Shankman, etc)
 
 #### Mails to or from important people: Network of 'well connected' people
 
 _Graph: 02.important.people.well.connected.pdf_
 
-The graph shows only those people in the network that have more than 4 connections. One can see that nearly
+The graph shows only those people in the network that have more than 4 connections. Within the selected data set, this will be people that are connected to most of the 'important people' in the network. One can see that nearly
 everybody is connected to Louise Kitchen.
 
 #### Mails to or from important people: Strength of connections between 'well connected' people
